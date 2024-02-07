@@ -1,0 +1,16 @@
+[project]
+name = "libThresholdLogic"
+dynamic = ["version"]
+description = "Threshold Logic Neuron Networks"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/jb2170/libThresholdLogic/"
+
+[tool.setuptools.dynamic]
+version = {attr = "libThresholdLogic.__version__"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
