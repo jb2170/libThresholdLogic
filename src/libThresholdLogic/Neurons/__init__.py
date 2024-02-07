@@ -1,4 +1,4 @@
 from .BaseNeuron import BaseNeuron
 from .ConstNeuron import ConstNeuron
-from .Neuron import Perceptron
+from .Perceptron import Perceptron
 from .ProxyNeuron import ProxyNeuron
