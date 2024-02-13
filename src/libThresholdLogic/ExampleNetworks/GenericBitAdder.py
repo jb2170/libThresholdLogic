@@ -20,6 +20,6 @@ class GenericBitAdder(NeuronNetwork):
             for neuron_dest_idx, neuron_dest in enumerate(neurons):
                 neuron_dest.add_input(2 ** (-neuron_dest_idx), neuron_src)
 
-        output_layer = neurons[:]
+        output_layer = neurons
 
-        super().__init__(neurons, input_layer, output_layer)
+        super().__init__(input_layer, output_layer)

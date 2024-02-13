@@ -9,7 +9,6 @@ class NeuronNetwork:
     """
     def __init__(
         self,
-        neurons: List[BaseNeuron],
         input_layer: List[ProxyNeuron],
         output_layer: List[BaseNeuron],
     ) -> None:
@@ -17,7 +16,6 @@ class NeuronNetwork:
         Child classes should use __init__ as the function to create and connect up the
         network's neurons, and call super().__init__(...) to store them as member variables here
         """
-        self.neurons = neurons
         self.input_layer = input_layer
         self.output_layer = output_layer
 
