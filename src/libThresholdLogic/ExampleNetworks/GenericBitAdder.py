@@ -4,7 +4,7 @@ class GenericBitAdder(NeuronNetwork):
     def __init__(self, n_neurons: int) -> None:
         self.n_neurons = n_neurons
 
-        neurons = [Perceptron([], 1.0) for _ in range(n_neurons)]
+        neurons = [Perceptron(1.0) for _ in range(n_neurons)]
 
         # inhibitory connections between neurons
         for neuron_src_idx, neuron_src in enumerate(neurons):

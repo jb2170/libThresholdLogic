@@ -1,4 +1,4 @@
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 from .BaseNeuron import BaseNeuron
 
@@ -10,9 +10,12 @@ class Perceptron(BaseNeuron):
     """
     A real neuron with weighted inputs, bias, and transfer function
     """
-    def __init__(self, inputs: List[Tuple[float, BaseNeuron]], bias: float) -> None:
-        self.inputs = inputs
+    def __init__(self, bias: float, inputs: Optional[List[Tuple[float, BaseNeuron]]] = None) -> None:
         self.bias = bias
+        if inputs is not None:
+            self.inputs = inputs
+        else:
+            self.inputs = []
 
     def do_call(self, cache) -> float:
         return self.heaviside(
