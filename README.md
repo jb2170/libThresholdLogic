@@ -2,6 +2,15 @@
 
 A Python library for creating threshold logic Neuron Networks in a declarative way. This library is based primarily on my [MSc Dissertation](Dissertation.pdf) work, and is an improved refactoring of the codebase. One is encouraged to read the dissertation, however a very abridged summary is given below, followed by documentation for the codebase and its example networks.
 
+## Installation
+
+- Clone the repository
+- `python -m venv venv`
+- `source ./venv/bin/activate`
+- `pip install -e .`
+
+Tests executable scripts are available in the `test` folder which correspond to the networks in `src/libThresholdLogic/ExampleNetworks`
+
 ## Threshold Logic
 
 ### TLDR
