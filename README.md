@@ -41,7 +41,7 @@ P and hence its stability depends on z" (Fitzhugh, 1961:450).
 
 | $z = 0.0$, subcricical; orbit-trapped to nullcline-intersection | $z = -0.4$, supercritical; first orbit |
 | - | - |
-| ![subcricical](docs/fhn-phase-1.png) | ![supercritical](docs/fhn-phase-2.png) |
+| ![subcricical](docs/img/fhn-phase-1.png) | ![supercritical](docs/img/fhn-phase-2.png) |
 
 
 In a special choice of hyperparameters of $a = b = 0$ one obtains the equations of the Van der Pol circuit. This can be constructed using electronic components. This motivates us to seek ways to create human-engineered electronic versions of other threshold effect dynamical systems.
@@ -52,7 +52,7 @@ A cooler, supercooled even, component is the Josephson Junction (JJ), which uses
 
 | Josephson Junction Neuron, with $\vec{w} \cdot \vec{x}$ supplied by $I_{\text{in}}$, and $b$ supplied by $I_{\text{b}}$ |
 | - |
-| ![Josephson Junction Neuron](docs/jjn-from-paper.png) |
+| ![Josephson Junction Neuron](docs/img/jjn-from-paper.png) |
 
 To be clear, whilst JJs use a quantum mechanical effect, we could use them in a conventional-computing setting with threshold logic, as well as in quantum-computing which has been done by D-Wave Systems. If synapses were to be discovered, mass-manufacturing of JJs becomes popularised, and cloud computing companies safely house low-temperature supercooled JJ computers for ssh-ing into, **we could be looking at threshold logic Josephson Junction computing overthrowing digital logic transistor computing for the next generational leap of computational power**.
 
