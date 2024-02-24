@@ -41,7 +41,7 @@ P and hence its stability depends on z" (Fitzhugh, 1961:450).
 
 | $z = 0.0$, subcricical; orbit-trapped to nullcline-intersection | $z = -0.4$, supercritical; first orbit |
 | - | - |
-| ![subcricical](docs/img/fhn-phase-1.png) | ![supercritical](docs/img/fhn-phase-2.png) |
+| ![subcritical](docs/img/fhn-phase-1.png) | ![supercritical](docs/img/fhn-phase-2.png) |
 
 
 In a special choice of hyperparameters of $a = b = 0$ one obtains the equations of the Van der Pol circuit. This can be constructed using electronic components. This motivates us to seek ways to create human-engineered electronic versions of other threshold effect dynamical systems.
@@ -56,40 +56,95 @@ A cooler, supercooled even, component is the Josephson Junction (JJ), which uses
 
 To be clear, whilst JJs use a quantum mechanical effect, we could use them in a conventional-computing setting with threshold logic, as well as in quantum-computing which has been done by D-Wave Systems. If synapses were to be discovered, mass-manufacturing of JJs becomes popularised, and cloud computing companies safely house low-temperature supercooled JJ computers for ssh-ing into, **we could be looking at threshold logic Josephson Junction computing overthrowing digital logic transistor computing for the next generational leap of computational power**.
 
+### The codebase
+
+We focus on 'synthetic' threshold logic in this codebase, that is the lossless mathematical derivations and functions, independent of a particular technology such as Josephson Junctions or Memristors. This provides as much portability as possible. Each file within the codebase has good further documentation.
+
+Every network / ALU inherits from the `NeuronNetwork` class and overrides its abstract `__init__` method, within it creating and connecting the network's neurons. This way of declaratively constructing a network, say `my_network`, means that one can peacefully call `my_network(inputs)` without having to think about the evaluation order of the neurons; the `NeuronNetwork.__call__` method is coded to do that, a depth-first algorithm. All one has to provide to `super().__init__` is an input layer of `ProxyNeuron`s and an output layer of neurons, corresponding to the IO of the network. A `ProxyNeuron` is a wrapper class for a `BaseNeuron` component which one intends to provide at a later time. For example one may evaluate the network on its own, which connects `ConstNeuron`s to the input layer, or one may connect networks together, chaining IO. Think of a `ProxyNeuron` like a bare wire sticking out of a 555 timer chip.
+
 ## libThresholdLogic.ExampleNetworks
 
-### Adders
+I would definitely recommend [Ben Eater][ben-eater-yt]'s YouTube channel for learning about how computers work at the lowest level.
 
-#### HalfAdder
+All of the following networks except `HammingGate` (which came to me recently) are described in the thesis as well. We make use of the term little/big 'bittian' (inspired by endian-ness) when talking about bitwise binary enumeration of numbers.
 
-#### FullAdder
+### `Adders.py`
 
-#### GenericBitAdder
+A simple operation we could ask of a computer is to add numbers together. We start with bitwise addition.
 
-#### GenericNumberAdder
+#### `HalfAdder`
 
-### LogicGates
+Adds two binary bits together, yielding two binary outputs, a 'sum' (1s) bit and a 'carry' (2s) bit.
 
-#### NOT - a humble inverter, often not required
+Observe how pleasant the way of connecting neurons together is.
 
-#### AND and NAND, OR and NOR - splitting the plane
+```py
+class HalfAdder(NeuronNetwork):
+    def __init__(self) -> None:
+        neuron_sum = Perceptron(1.0)
+        neuron_carry = Perceptron(1.0)
+
+        neurons = [neuron_sum, neuron_carry]
+
+        # inhibitory connection from carry to sum
+        neuron_sum.add_input(-2.0, neuron_carry)
+
+        input_layer = [ProxyNeuron() for _ in range(2)]
+
+        # excitatory connections from inputs
+        for neuron_src in input_layer:
+            neuron_sum.add_input(1.0, neuron_src)
+            neuron_carry.add_input(0.5, neuron_src)
+
+        output_layer = neurons
+
+        super().__init__(input_layer, output_layer)
+```
+
+With a corresponding neuron diagram
+
+![alt](docs/img/svg/Half-Adder.svg.png)
+
+#### `FullAdder`
+
+It would be nice to be able to chain half-adders together for adding two k-bit numbers. The adders would experience a ripple-effect, carrying the carry bits forwards to the next adder each time we add some bits. For this we would need to connect another input to the adder's neurons, which is indeed what we do for a `FullAdder`.
+
+A full adder takes in three inputs, and provides two outputs.
+
+![alt](docs/img/svg/Full-Adder.svg.png)
+
+#### `GenericBitAdder`
+
+XXX TODO Complete README
+
+#### `GenericNumberAdder`
+
+### `LogicGates.py`
+
+#### `NOT` - a humble inverter, often not required
+
+#### `AND` and `NAND`, `OR` and `NOR` - splitting the plane
 
 
 
-#### AND and NOR, NAND and OR - a new regrouping
+#### `AND` and `NOR`, `NAND` and `OR` - a new regrouping
 
-#### GAND and GNAND - generalised bit selection
+#### `GAND` and `GNAND` - generalised bit selection
 
 `x == b` and `x != b`
 
-#### HammingGate - The ultimate $\{0, 1\}^n$ linear gate
+#### `HammingGate` - The ultimate $\{0, 1\}^n$ mono-neuron gate
 
 
 
-#### XOR and XNOR - Non-linearly separable gates
+#### `XOR` and `XNOR` - Non-linearly separable gates
 
-### Multipliers
+### `Multipliers.py`
 
-#### BitMultiplier2x2
+#### `BitMultiplier2x2`
 
-#### GenericBitMultiplier
+#### `GenericBitMultiplier`
+
+
+
+[ben-eater-yt]: https://www.youtube.com/watch?v=dXdoim96v5A
