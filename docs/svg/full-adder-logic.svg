@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="640"
+   height="170"
+   id="svg132"
+   sodipodi:docname="simulation (1).svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview132"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4059524"
+     inkscape:cx="397.23963"
+     inkscape:cy="275.25826"
+     inkscape:window-width="1920"
+     inkscape:window-height="998"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg132" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="page">
+      <rect
+         x="0"
+         y="0"
+         width="840"
+         height="550"
+         id="rect1" />
+    </clipPath>
+    <clipPath
+       id="clipPath2">
+      <rect
+         x="0"
+         y="0"
+         width="840"
+         height="550"
+         id="rect2" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#page)"
+     id="g132"
+     transform="translate(-38.834912,-137.39882)">
+    <path
+       d="m 180,200 h 25"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path4" />
+    <path
+       d="m 180,220 h 25"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path5" />
+    <path
+       d="m 240,210 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path6" />
+    <path
+       d="m 192.5,190 c 9,9 9,31 0,40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path7" />
+    <path
+       d="m 200,190 c 9,9 9,31 0,40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path8" />
+    <path
+       d="m 200,190 c 20,0 35,10 40,20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path9" />
+    <path
+       d="m 200,230 c 20,0 35,-10 40,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path10" />
+    <circle
+       cx="180"
+       cy="200"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle10" />
+    <circle
+       cx="180"
+       cy="200"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle11" />
+    <circle
+       cx="180"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle12" />
+    <circle
+       cx="180"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle13" />
+    <circle
+       cx="260"
+       cy="210"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle14" />
+    <circle
+       cx="260"
+       cy="210"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle15" />
+    <path
+       d="m 180,260 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path15" />
+    <path
+       d="m 180,280 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path16" />
+    <path
+       d="m 240,270 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path17" />
+    <path
+       d="m 220,250 h -20 v 40 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path18" />
+    <path
+       d="m 220,250 c 10,0 20,10 20,20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path19" />
+    <path
+       d="m 220,290 c 10,0 20,-10 20,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path20" />
+    <circle
+       cx="180"
+       cy="260"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle20" />
+    <circle
+       cx="180"
+       cy="260"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle21" />
+    <circle
+       cx="180"
+       cy="280"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle22" />
+    <circle
+       cx="180"
+       cy="280"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle23" />
+    <circle
+       cx="260"
+       cy="270"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle24" />
+    <circle
+       cx="260"
+       cy="270"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle25" />
+    <path
+       d="M 180,200 H 50"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path25" />
+    <circle
+       cx="180"
+       cy="200"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle26" />
+    <circle
+       cx="180"
+       cy="200"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle27" />
+    <circle
+       cx="50"
+       cy="200"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle28" />
+    <circle
+       cx="50"
+       cy="200"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle29" />
+    <path
+       d="m 120,200 v 60"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path29" />
+    <circle
+       cx="120"
+       cy="200"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle30" />
+    <circle
+       cx="120"
+       cy="200"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle31" />
+    <circle
+       cx="120"
+       cy="260"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle32" />
+    <circle
+       cx="120"
+       cy="260"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle33" />
+    <path
+       d="m 120,260 h 60"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path33" />
+    <circle
+       cx="120"
+       cy="260"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle34" />
+    <circle
+       cx="120"
+       cy="260"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle35" />
+    <circle
+       cx="180"
+       cy="260"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle36" />
+    <circle
+       cx="180"
+       cy="260"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle37" />
+    <path
+       d="M 180,280 H 110"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path37" />
+    <circle
+       cx="180"
+       cy="280"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle38" />
+    <circle
+       cx="180"
+       cy="280"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle39" />
+    <circle
+       cx="110"
+       cy="280"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle40" />
+    <circle
+       cx="110"
+       cy="280"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle41" />
+    <path
+       d="M 50,220 H 180"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path41" />
+    <circle
+       cx="50"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle42" />
+    <circle
+       cx="50"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle43" />
+    <circle
+       cx="180"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle44" />
+    <circle
+       cx="180"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle45" />
+    <path
+       d="M 110,280 V 220"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path45" />
+    <circle
+       cx="110"
+       cy="280"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle46" />
+    <circle
+       cx="110"
+       cy="280"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle47" />
+    <circle
+       cx="110"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle48" />
+    <circle
+       cx="110"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle49" />
+    <path
+       d="m 390,160 h 25"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path49" />
+    <path
+       d="m 390,180 h 25"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path50" />
+    <path
+       d="m 450,170 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path51" />
+    <path
+       d="m 402.5,150 c 9,9 9,31 0,40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path52" />
+    <path
+       d="m 410,150 c 9,9 9,31 0,40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path53" />
+    <path
+       d="m 410,150 c 20,0 35,10 40,20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path54" />
+    <path
+       d="m 410,190 c 20,0 35,-10 40,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path55" />
+    <circle
+       cx="390"
+       cy="160"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle55" />
+    <circle
+       cx="390"
+       cy="160"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle56" />
+    <circle
+       cx="390"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle57" />
+    <circle
+       cx="390"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle58" />
+    <circle
+       cx="470"
+       cy="170"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle59" />
+    <circle
+       cx="470"
+       cy="170"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle60" />
+    <path
+       d="m 390,220 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path60" />
+    <path
+       d="m 390,240 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path61" />
+    <path
+       d="m 450,230 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path62" />
+    <path
+       d="m 430,210 h -20 v 40 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path63" />
+    <path
+       d="m 430,210 c 10,0 20,10 20,20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path64" />
+    <path
+       d="m 430,250 c 10,0 20,-10 20,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path65" />
+    <circle
+       cx="390"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle65" />
+    <circle
+       cx="390"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle66" />
+    <circle
+       cx="390"
+       cy="240"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle67" />
+    <circle
+       cx="390"
+       cy="240"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle68" />
+    <circle
+       cx="470"
+       cy="230"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle69" />
+    <circle
+       cx="470"
+       cy="230"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle70" />
+    <path
+       d="M 260,180 H 50"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path70" />
+    <circle
+       cx="260"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle71" />
+    <circle
+       cx="260"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle72" />
+    <circle
+       cx="50"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle73" />
+    <circle
+       cx="50"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle74" />
+    <path
+       d="m 500,230 h 25"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path74" />
+    <path
+       d="m 500,250 h 25"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path75" />
+    <path
+       d="m 560,240 h 20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path76" />
+    <path
+       d="m 520,220 c 9,9 9,31 0,40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path77" />
+    <path
+       d="m 520,220 c 20,0 35,10 40,20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path78" />
+    <path
+       d="m 520,260 c 20,0 35,-10 40,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path79" />
+    <circle
+       cx="500"
+       cy="230"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle79" />
+    <circle
+       cx="500"
+       cy="230"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle80" />
+    <circle
+       cx="500"
+       cy="250"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle81" />
+    <circle
+       cx="500"
+       cy="250"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle82" />
+    <circle
+       cx="580"
+       cy="240"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle83" />
+    <circle
+       cx="580"
+       cy="240"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle84" />
+    <path
+       d="M 390,180 H 290"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path84" />
+    <circle
+       cx="390"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle85" />
+    <circle
+       cx="390"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle86" />
+    <circle
+       cx="290"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle87" />
+    <circle
+       cx="290"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle88" />
+    <path
+       d="M 390,160 H 280"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path88" />
+    <circle
+       cx="390"
+       cy="160"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle89" />
+    <circle
+       cx="390"
+       cy="160"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle90" />
+    <circle
+       cx="280"
+       cy="160"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle91" />
+    <circle
+       cx="280"
+       cy="160"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle92" />
+    <path
+       d="m 320,180 v 60"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path92" />
+    <circle
+       cx="320"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle93" />
+    <circle
+       cx="320"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle94" />
+    <circle
+       cx="320"
+       cy="240"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle95" />
+    <circle
+       cx="320"
+       cy="240"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle96" />
+    <path
+       d="m 320,240 h 70"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path96" />
+    <circle
+       cx="320"
+       cy="240"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle97" />
+    <circle
+       cx="320"
+       cy="240"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle98" />
+    <circle
+       cx="390"
+       cy="240"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle99" />
+    <circle
+       cx="390"
+       cy="240"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle100" />
+    <path
+       d="m 330,160 v 60"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path100" />
+    <circle
+       cx="330"
+       cy="160"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle101" />
+    <circle
+       cx="330"
+       cy="160"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle102" />
+    <circle
+       cx="330"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle103" />
+    <circle
+       cx="330"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle104" />
+    <path
+       d="M 390,220 H 330"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path104" />
+    <circle
+       cx="390"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle105" />
+    <circle
+       cx="390"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle106" />
+    <circle
+       cx="330"
+       cy="220"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle107" />
+    <circle
+       cx="330"
+       cy="220"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle108" />
+    <path
+       d="m 260,180 20,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path108" />
+    <circle
+       cx="260"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle109" />
+    <circle
+       cx="260"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle110" />
+    <circle
+       cx="280"
+       cy="160"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle111" />
+    <circle
+       cx="280"
+       cy="160"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle112" />
+    <path
+       d="M 260,270 H 480"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path112" />
+    <circle
+       cx="260"
+       cy="270"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle113" />
+    <circle
+       cx="260"
+       cy="270"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle114" />
+    <circle
+       cx="480"
+       cy="270"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle115" />
+    <circle
+       cx="480"
+       cy="270"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle116" />
+    <path
+       d="M 470,170 H 580"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path116" />
+    <circle
+       cx="470"
+       cy="170"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle117" />
+    <circle
+       cx="470"
+       cy="170"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle118" />
+    <circle
+       cx="580"
+       cy="170"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle119" />
+    <circle
+       cx="580"
+       cy="170"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle120" />
+    <path
+       d="m 470,230 h 30"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path120" />
+    <circle
+       cx="470"
+       cy="230"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle121" />
+    <circle
+       cx="470"
+       cy="230"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle122" />
+    <circle
+       cx="500"
+       cy="230"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle123" />
+    <circle
+       cx="500"
+       cy="230"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle124" />
+    <path
+       d="m 260,210 30,-30"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path124" />
+    <circle
+       cx="260"
+       cy="210"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle125" />
+    <circle
+       cx="260"
+       cy="210"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle126" />
+    <circle
+       cx="290"
+       cy="180"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle127" />
+    <circle
+       cx="290"
+       cy="180"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle128" />
+    <path
+       d="m 480,270 20,-20"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="path128" />
+    <circle
+       cx="480"
+       cy="270"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle129" />
+    <circle
+       cx="480"
+       cy="270"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle130" />
+    <circle
+       cx="500"
+       cy="250"
+       r="4"
+       stroke="none"
+       fill="#ffffff"
+       id="circle131" />
+    <circle
+       cx="500"
+       cy="250"
+       r="4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       id="circle132" />
+  </g>
+  <rect
+     style="fill:none;stroke:#ff0101;stroke-width:3.77953;stroke-opacity:1"
+     id="rect132"
+     width="178.24216"
+     height="109.53428"
+     x="264.02032"
+     y="8.1253195" />
+  <rect
+     style="fill:none;stroke:#ff0101;stroke-width:3.77953;stroke-opacity:1"
+     id="rect132-3"
+     width="178.24216"
+     height="109.53428"
+     x="56.910931"
+     y="48.012535" />
+  <text
+     xml:space="preserve"
+     style="font-size:32px;text-align:end;direction:rtl;text-anchor:end;fill:none;stroke:#ff0101;stroke-width:3.77953;stroke-opacity:1"
+     x="555.77985"
+     y="39.989845"
+     id="text132"><tspan
+       sodipodi:role="line"
+       id="tspan132"
+       x="555.77985"
+       y="39.989845"
+       style="fill:#000000;fill-opacity:1;stroke:none">out</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32px;text-align:end;direction:rtl;text-anchor:end;fill:none;stroke:#ff0101;stroke-width:3.77953;stroke-opacity:1"
+     x="555.77985"
+     y="110.08376"
+     id="text132-6"><tspan
+       sodipodi:role="line"
+       id="tspan132-7"
+       x="555.77985"
+       y="110.08376"
+       style="fill:#000000;fill-opacity:1;stroke:none">carry</tspan></text>
+</svg>
