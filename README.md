@@ -15,7 +15,7 @@ Tests executable scripts are available in the `test` folder which correspond to 
 
 ### TLDR
 
-The primary component of threshold logic is the (*classical) Perceptron, whose scalar output $y$ for input $\vec{x} \in \{0, 1\}^n$, weights $\vec{w} \in \R^n$, and bias $b \in \R$ is determined by
+The primary component of threshold logic is the (*classical) Perceptron, whose scalar output $y$ for input $\vec{x} \in \{0, 1\}^n$, weights $\vec{w} \in \mathbb{R}^n$, and bias $b \in \mathbb{R}$ is determined by
 
 $$
 y = H(\vec{w} \cdot \vec{x} - b)
@@ -23,7 +23,7 @@ $$
 
 where $H$ is the Heaviside step function. (*in modern usage a perceptron employs a smoother transfer function in place of $H$ such as the sigmoid, for suitability within calculus)
 
-With clever choices for $\vec{w}$ and $b$, over which one has freedom, one can create logic gates and ALUs. $\vec{x}$ can be of arbitrary dimension allowing a high degree of connectivity when linking perceptrons' inputs and outputs with each other. This is one of the big advantages over digital (binary) logic, leading to significantly reduced (often $\mathcal{O}(n) \to \mathcal{O}(\log(n))$) component-count in common ALUs.
+With clever choices for $\vec{w}$ and $b$, over which one has freedom, one can create logic gates and ALUs. $\vec{x}$ can be of arbitrary dimension allowing a high degree of connectivity when linking perceptrons' inputs and outputs with each other. This is one of the big advantages over digital (binary) logic, leading to significantly reduced (often $O(n) \to O(\log(n))$) component-count in common ALUs.
 
 ### A quick rundown of why we are interested in threshold logic
 
@@ -32,8 +32,10 @@ With clever choices for $\vec{w}$ and $b$, over which one has freedom, one can c
 Threshold activation is exhibited by biological neurons in nature. Scientific experimentation observing how neurons and synapses react under electrical currents procured their mathematical modelling as dynamical systems of differential equations. One such model is the two Fitzhugh-Nagumo (FHN) equations (1961), simplifying the four differential equations of earlier work done by Hodgkin and Huxley (1952).
 
 $$
-\dot{x} = c(y + x - x^3 / 3 + z) \\
-\dot{y} = -(x - a + by) / c
+\begin{align*}
+\dot{x} &= c(y + x - x^3 / 3 + z) \\
+\dot{y} &= -(x - a + by) / c
+\end{align*}
 $$
 
 Bifurcation theory analysis of the FHN equations reveals a neuron reaching its threshold for activation to be equivalent to a limit-cycle dynamical system reaching its first bifurcation orbit. "The location of the singular point
@@ -103,7 +105,7 @@ class HalfAdder(NeuronNetwork):
 
 With a corresponding neuron diagram
 
-![alt](docs/img/svg/Half-Adder.svg.png)
+![Half Adder](docs/img/svg/Half-Adder.svg.png)
 
 #### `FullAdder`
 
@@ -111,33 +113,109 @@ It would be nice to be able to chain half-adders together for adding two k-bit n
 
 A full adder takes in three inputs, and provides two outputs.
 
-![alt](docs/img/svg/Full-Adder.svg.png)
+![Full Adder](docs/img/svg/Full-Adder.svg.png)
 
 #### `GenericBitAdder`
 
-XXX TODO Complete README
+We go further and develop a generalised $n$-neuron version of the `FullAdder`, the `GenericBitAdder`. Any network with $n$ output neurons can produce at most $2 ^ n$ distinct outputs. The `GenericBitAdder` achieves this with its output corresponding to the binary representation of adding together its $2 ^ n - 1$ input bits; for $i \in \{0, \dots, n - 1\}$ the $i$-th output neuron is the $2 ^ i$-s bit.
 
-#### `GenericNumberAdder`
+Observe the carefully chosen pattern of powers of 2 for the weights in the `FullAdder` above. A full justification and mathematical derivation is given in the thesis. A summary is that we extend to the `GenericBitAdder` as follows:
+
+- For each neuron $N_i$, $i \in \{0, \dots, n - 1\}$
+  - Connect all $2 ^ n - 1$ inputs to $N_i$, each with excitatory weight $1 / 2 ^ i$
+  - For each neuron $N_j$, $j \in \{0, \dots, i - 1\}$
+    - Connect the output of $N_i$ to $N_j$ with inhibitory weight $2 ^ {i - j}$.
+
+The `FullAdder` is a 2-neuron `GenericBitAdder`.
+
+To create a $2 ^ n - 1$ bit adder with transistors / digital logic would require $O(2 ^ n)$ transistors, however with neurons / threshold logic we require only $n$ neurons. This is a logarithmic reduction in the complexity of component count, which is a very non-trivial feat to achieve.
+
+> Typical `GenericBitAdder` neuron connections
+> ![Generic Bit Adder](docs/img/svg/Generic-Adder-Neuron.svg.png)
+
+> Example of $n = 3$
+> ![3-neuron 7-input adder](docs/img/svg/7-3-Adder-Carry-Highlight.svg.png)
+
+#### `GenericNumberAdder` - SIMD addition
+
+When connecting `GenericBitAdder`s together in a ripple carry fashion, one considers the upper $n - 1$ output neurons as carry bits, which are carried correspondingly into the next $n - 1$ adders. Consequently we reserve $n - 1$ of each adder's $2 ^ n - 1$ inputs for carry bits, leaving us with $2 ^ n - n$ 'real' inputs, as seen in the images above. Chaining together $K$ adders we create a $2 ^ n - n$ input $K$-bit SIMD adder.
+
+In other words we can simultaneously add together $2 ^ n - n$ binary numbers each with $K$ bits, using only $Kn$ neurons. This is an operation which with transistor based hardware is exclusive to GPUs, and high end CPUs with AVX instructions, due to the high number of transistors required.
 
 ### `LogicGates.py`
 
+Part III of the thesis establishes the compatibility of threshold logic and digital logic. Specifically we embed digital logic into threshold logic, and come up with optimisations-to / extensible-forms-of common logic gates.
+
 #### `NOT` - a humble inverter, often not required
+
+Since we allow negative weighting of inputs in our networks, a `NOT` gate is hardly ever required, but here it is anyways.
+
+![NOT](docs/img/svg/Gates/NOT.svg.png)
 
 #### `AND` and `NAND`, `OR` and `NOR` - splitting the plane
 
+We consider these two families of gates next. One recognises that the formula $\vec{w} \cdot \vec{x} - b$, used in the neuron's activation formula, characterises the equation of a plane (at least up to normalisation of $\vec{w}$). Indeed with sensible choices of $\vec{w}$ and $b$ we can isolate $(1,1)$ and $(0,0)$ to create `AND` and `OR` gates respectively. The complimentary side of the planes form `NAND` and `NOR` gates respectively, with the weights and biases recoverable by rearranging the formula $\vec{w} \cdot \vec{x} - b < 0$ into $-\vec{w} \cdot \vec{x} - (-b) > 0$
 
+| `AND` and `NAND` | `OR` and `NOR` |
+| - | - |
+| ![AND-NAND-Plane](docs/img/Plane-AND.png) | ![OR-NOR-Plane](docs/img/Plane-OR.png) |
 
-#### `AND` and `NOR`, `NAND` and `OR` - a new regrouping
+| `AND` | `NAND` | `OR` | `NOR` |
+| - | - | - | - |
+| ![AND](docs/img/svg/Gates/AND.svg.png) | ![NAND](docs/img/svg/Gates/NAND.svg.png) | ![OR](docs/img/svg/Gates/OR.svg.png) | ![NOR](docs/img/svg/Gates/NOR.svg.png) |
+
+#### Beyond two inputs
+
+This is where things get powerful! The formulae for `AND` and `OR` (and their complements) can easily be generalised with threshold logic such that all, or any, of $n$ inputs activate the neuron. These four classes accept a keyword argument `n_inputs`, which by default is 2.
+
+We do the derivations in our thesis, considering shaving off the $\vec{0}$ and $\vec{1}$ corners of an $n$-dimensional unit hypercube. All weights have unit magnitude, and the biases are given below
+
+| Multi-input `AND` | Multi-input `OR` |
+| - | - |
+| ![n-input-AND](docs/img/svg/Gates/AND-n.svg.png) | ![n-input-OR](docs/img/svg/Gates/OR-n.svg.png) |
+
+$n$-input digital logic gates would take $O(n)$ transistors, and up to $O(n)$ propagation time to activate, however threshold logic achieves all this with one neuron.
 
 #### `GAND` and `GNAND` - generalised bit selection
 
-`x == b` and `x != b`
+The most generalised versions of the mono-neuron gates achieved in the thesis (though now superseded by `HammingGate` further on) are the `GAND` and `GNAND` gates. Short for Generalised-(N)AND, these provide arbitrary bit-selection / exclusion of the form $\vec{x} = \vec{x_0}$ and $\vec{x} \neq \vec{x_0}$.
+
+The gates take in a single argument `seek_vector` / `flee_vector`, a tuple corresponding of bits that should be sought or not.
+
+| `GAND` | `GNAND` |
+| - | - |
+| ![GAND](docs/img/svg/Gates/GAND.svg.png) | ![GNAND](docs/img/svg/Gates/GNAND.svg.png) |
 
 #### `HammingGate` - The ultimate $\{0, 1\}^n$ mono-neuron gate
 
+This gate came to me recently when going back over my work. The `G(N)AND` gates work by checking whether or not their input $\vec{x}$ has Hamming distance zero from their `target_vector` $\vec{v}$. Could we generalise this to Hamming distance $d$, to create a gate representing $B_d[\vec{x_0}]$, the closed ball of radius $d$ with respect to the Hamming metric's topology?
 
+Indeed we can! An adjustment to equation (10.7) to the form
+
+$$
+\vec{x} \cdot (2 \vec{v} - 1) = \dfrac{2k - 2d - 1}{2}
+$$
+
+reduces the tolerance of the `GAND` gate; the weights end up the same, but the bias has been reduced by $d$. This can be seen as translating the plane to include more corners of the $n$-dimensional cube.
+
+Furthermore if one really thinks hard, one notices that $\sim B_d[\vec{x_0}] = B_{n - 1 - d}[\sim\vec{x_0}]$, that is the negation of a closed ball around $\vec{x_0}$ of radius $d$ is exactly the closed ball of radius $n - 1 - d$ around the bitwise inverse of $\vec{x_0}$. This allows us to unify both `GAND` and `GNAND` flavours of gate into one hamming metric based gate which we call `HammingGate`.
+
+Hence the inheritance hierarchy in `LogicGates.py` is the following:
+
+- `HammingGate`
+  - `GAND`
+    - `AND`
+    - `NOR`
+  - `GNAND`
+    - `NAND`
+      - `NOT`
+    - `OR`
+
+The amazing things we can achieve with just one neuron!
 
 #### `XOR` and `XNOR` - Non-linearly separable gates
+
+XXX TODO Finish this off
 
 ### `Multipliers.py`
 
