@@ -84,20 +84,12 @@ class OR(GNAND):
         flee_vector = tuple(0 for _ in range(n_inputs))
         super().__init__(flee_vector)
 
-class NOT(NeuronNetwork):
+class NOT(NAND):
     """
     Returns 1 when input is 0, else 0
     """
     def __init__(self) -> None:
-        neuron = Perceptron(-0.5)
-
-        input_layer = [ProxyNeuron()]
-
-        neuron.add_input(-1.0, input_layer[0])
-
-        output_layer = [neuron]
-
-        super().__init__(input_layer, output_layer)
+        super().__init__(n_inputs = 1)
 
 class XOR(NeuronNetwork):
     """
